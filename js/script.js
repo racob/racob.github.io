@@ -6,4 +6,3 @@ spans.forEach(span => span.addEventListener('mouseover', function(e) {
 spans.forEach(span => span.addEventListener('mouseout', function(e) { 
 	span.classList.remove('animated', 'rubberBand')
 }))
-

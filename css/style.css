@@ -16,12 +16,12 @@ html {
 nav ul,
 .main-info-section {
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: column-wrap;
 	justify-content: space-between;
 }
 
 body {
-	background-color: #252627;
+	background-color: #252627; 
 }
 
 header {
@@ -88,6 +88,14 @@ a:hover::before {
 	position: relative;
 	top: 150px;
 	height: calc(100vh - 81.6px);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.profile-image img {
+	border-radius: 25px;
+	margin-top: 50px;
 }
 
 .text {
@@ -96,7 +104,6 @@ a:hover::before {
 
 .text h1 {
 	color: #fff;
-	font-size: 3rem;
 	cursor: context-menu;
 }
 
@@ -120,7 +127,6 @@ span.m-left {
 .text p {
 	letter-spacing: 3px;
 	word-spacing: 5px;
-	font-size: 1rem;
 	color: #fff;
 	opacity: .5;
 }
@@ -133,7 +139,6 @@ span.m-left {
 .icons-social a {
 	padding: 10px 15px;
 	color: #FAFAFA;
-	font-size: 2.8rem;
 	border: unset;
 	letter-spacing: unset;
 	overflow: unset;
@@ -147,12 +152,6 @@ span.m-left {
 	font-family: "Font Awesome 5 Brands";
 }
 
-.profile-image img {
-	border-radius: 25px;
-	width: 650px;
-	margin-top: 50px;
-}
-
 .about {
 	height: 100vh;
 	margin-top: 100px;
@@ -160,13 +159,13 @@ span.m-left {
 }
 
 .about h1 {
-	font-size: 10rem;
+	font-size: 11vw;
 	z-index: 0;
 	opacity: .2;
 }
 
 .projects h1 {
-	font-size: 10rem;
+	font-size: 11vw;
 	z-index: 0;
 	opacity: .2;
 	text-align: right;
@@ -186,7 +185,6 @@ span.m-left {
 }
 
 .about-me-info p {
-	font-size: 1.3rem;
 	color: #bebebe;
 }
 
@@ -212,7 +210,7 @@ span.m-left {
 }
 
 .projects {
-	height: 100vh;
+	min-height: 100vh;
 	padding: 70px 20px 0;
 	margin-top: 100px;
 }
@@ -222,6 +220,7 @@ span.m-left {
 	top: -60px;
 	z-index: 1;
 	display: flex;
+	flex-flow: wrap;
 	margin-top: unset;
 	justify-content: center;
 }
@@ -231,8 +230,8 @@ span.m-left {
 	box-shadow: 0 0 1.2rem rgba(0,0,0,.4);
 	position: relative;
 	display: inline-block;
-  	max-width: 500px;
-  	margin: 5px 20px 5px;
+  	margin: 10px 20px;
+  	flex: 0 1 30%;
   	text-align: center;
 }
 
@@ -240,6 +239,7 @@ span.m-left {
 	display: block;
 	max-width: 100%;
 	max-height: 300px;
+	min-width: 300px;
 	width: auto;
 	height: auto;
 }
@@ -310,7 +310,128 @@ footer p {
 	padding: 20px 0;
 }
 
+@media screen and (min-width: 30em) {
+	.container {
+		padding: 0 50px 0 50px;
+	}
 
+	nav ul {
+		display: none;
+	}
+
+	.main-info-section {
+		top: 10px;
+	}
+
+	.text h1 {
+		font-size: 3rem;
+	}
+
+	.text p {
+		font-size: 0.9rem;
+	}
+
+	.icons-social a {
+		font-size: 2rem;
+	}
+
+	.profile-image img {
+		width: 300px;
+	}
+
+	.about {
+		height: 100vh;
+		margin-top: 200px;
+		padding-top: 80px;
+	}
+
+	.about-me-info {
+		top: -20px;
+	}
+
+	.about-me-info p {
+		font-size: 1rem;
+	}
+
+	.about img {
+		width: 150px;
+		top: -40px;
+	}
+
+	.projects {
+		margin-top: 10px;
+	}
+
+	.cards {
+		top: -30px;
+	}
+
+    .card {
+       max-width: 300px;
+    }
+}
+ 
+@media screen and (min-width: 60em) {
+
+	.container {
+		padding: 0 100px 0 100px;
+	}
+
+	nav ul {
+		display: flex;
+	}
+
+	.text h1 {
+		font-size: 3rem;
+	}
+
+	.text p {
+		font-size: 1rem;
+	}
+
+	.main-info-section {
+		top: 150px;
+	}
+
+	.icons-social a {
+		font-size: 2.8rem;
+	}
+
+	.profile-image img {
+		width: 650px;
+	}
+
+	.about {
+	margin-top: 100px;
+	padding-top: 80px;
+	}
+	.about-me-info p {
+		font-size: 1.3rem;
+	}
+
+	.about-me-info {
+		top: -65px;
+	}
+
+	.about img {
+		width: 300px;
+		top: -180px;
+	}
+
+	.projects {
+		margin-top: 100px;
+		padding: 70px 20px 0;
+	}
+
+	.cards {
+		top: -70px;
+	}
+
+    .card {
+        max-width: calc(50% - 1em);
+    }
+
+}
 
 
 
