@@ -12,10 +12,6 @@ $grey-title: #707070;
 // Update bulma global variables
 $font-family: "PT Sans", sans-serif;
 
-* {
-    font-family: "PT Sans", sans-serif;
-}
-
 html {
 	scroll-behavior: smooth;
 }
@@ -65,8 +61,8 @@ html {
     box-shadow: 0 0 1.2rem rgba(0,0,0,.4);
 }
 
-.card .title {
-    color: $primary !important;
+.card h1 {
+    color: $light !important;
 }
 
 .card-footer {

@@ -7760,9 +7760,6 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
-* {
-  font-family: "PT Sans", sans-serif; }
-
 html {
   scroll-behavior: smooth; }
 
@@ -7801,8 +7798,8 @@ html {
   color: whitesmoke !important;
   box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.4); }
 
-.card .title {
-  color: #00d1b2 !important; }
+.card h1 {
+  color: whitesmoke !important; }
 
 .card-footer {
   border-color: #363636 !important; }
