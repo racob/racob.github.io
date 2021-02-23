@@ -1,0 +1,88 @@
+@charset "utf-8";
+@import "../node_modules/bulma/bulma.sass";
+@import "../node_modules/@creativebulma/bulma-tooltip/dist/bulma-tooltip.min.css";
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+// Colors
+$grey-bg: #252627;
+$grey-nav: #181818;
+$grey-title: #707070;
+
+// Update bulma global variables
+$font-family: "PT Sans", sans-serif;
+
+* {
+    font-family: "PT Sans", sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.is-dark {
+    background-color: $grey-bg !important;
+}
+
+.navbar-burger span {
+    height: 2px;
+}
+
+.navbar-burger:active {
+    background-color: $primary !important;
+    color: $grey-nav !important;
+}
+
+.navbar-menu .navbar-item:hover {
+    background-color: $primary !important;
+    color: $grey-nav !important;
+}
+
+.buttons .button:hover {
+    background-color: $primary !important;
+    color: $grey-bg !important;
+}
+
+.has-background-grey-nav {
+    background-color: $grey-nav !important;
+}
+
+.has-background-grey-bg {
+    background-color: $grey-bg !important;
+}
+
+.message-body .block {
+    color: $light !important;
+}
+
+#about .image {
+    top: -40px !important;
+}
+
+.card {
+    background-color: $grey-bg;
+    color: $light !important;
+    box-shadow: 0 0 1.2rem rgba(0,0,0,.4);
+}
+
+.card .title {
+    color: $primary !important;
+}
+
+.card-footer {
+    border-color: $dark!important;
+}
+
+.card-footer-item {
+    border-color: $dark !important;
+    color: $primary !important;
+}
+
+.card-footer-item:hover {
+    background-color: $primary;
+    color: $grey-bg !important;
+}
+
+.footer {
+    padding: 1rem 1.5rem 3rem;
+}

@@ -3,126 +3,193 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/animate.css" />
-    <link rel="stylesheet" href="css/style.css" />
     <title>Eibiel Sardjanto</title>
   </head>
   <body>
-
-  	<div class="container navbar">
-  		<header>
-  			<div class="lgo">
-  				<h1>Mohamad Eibiel Sardjanto</h1>
-  			</div>
-
-  			<nav>
-  				<ul>
-  					<li><a href="#about">About Me</a></li>
-  					<li><a href="#projects">My Projects</a></li>
-  				</ul>
-  			</nav>
-  		</header>
-  	</div>
-
-  	<div class="container main-info-section">
-  		<div class="text">
-  			<h1>
-  				<span>H</span>
-  				<span class="m-left">i</span>
-  				<span class="m-left">,</span>
-  				<br>
-  				<span>I</span>
-  				<span class="m-left">'</span>
-  				<span class="m-left">m</span>
-  				<span class="name">E</span>
-  				<span class="m-left name">i</span>
-  				<span class="m-left name">b</span>
-  				<span class="m-left name">i</span>
-  				<span class="m-left name">e</span>
-  				<span class="m-left name">l</span>
-  				<span class="m-left">,</span>
-  				<br>
-  				<span>IOS</span>
-  				<span>D</span>
-  				<span class="m-left">e</span>
-  				<span class="m-left">v</span>
-  				<span class="m-left">e</span>
-  				<span class="m-left">l</span>
-  				<span class="m-left">o</span>
-  				<span class="m-left">p</span>
-  				<span class="m-left">e</span>
-  				<span class="m-left">r</span>
-  				<span class="m-left">.</span>
-  			</h1>
-  			<p>Jakarta, Indonesia | Computer Science Undergraduate</p>
-  			<div class="icons-social">
-  				<a target="_blank" href="https://github.com/racob"><i class="fab fa-github"></i></a>
-				<a target="_blank" href="https://www.linkedin.com/in/eibiel/"><i class="fab fa-linkedin"></i></a>
-				<a target="_blank" href="mailto:eibiel.sardjanto@gmail.com"><i class="fas fa-envelope"></i></a>
-				<a target="_blank" href="https://t.me/eibiel_s"><i class="fab fa-telegram"></i></a>
-				<a target="_blank" href="https://drive.google.com/drive/folders/1m35XlFNzsyQI5JimalOMGPbRfp9xnTEZ?usp=sharing"><i class="far fas fa-id-badge"></i></a>
-  			</div>
-  		</div>
-  		<div class="profile-image">
-  			<img src="img/profile-img.jpg" loading="lazy" alt="Mohamad Eibiel Sardjanto">
-  		</div>
-  	</div>
-
-  	<div class="container about" id="about">
-  		<h1>About Me</h1>
-  		<div class="about-me-info">
-  			<p>Graduated from Apple Developer Academy Indonesia 2019. Mainly Experienced in native IOS app development.</p>
-  			<p>Handled many frontend projects, but also curious in machine learning, cloud computing, and other platforms development.</p>
-  			<p>Currently studying in Faculty of Computer Science and Engineering as an undergraduate in International University Liaison Indonesia (IULI).</p>
-  		</div>
-  		<img src="img/swift-logo.png">
-  	</div>
-
-  	<div class="container projects" id="projects">
-  		<h1>My Projects</h1>
-  		<div class="cards">
-	  		<div class="card">
-			  <img src="img/archy.gif" loading="lazy" alt="Archy demo gif">
-			  <h1>Archy</h1>
-			  <p>Body tracking app to help archers gain feedback on their posture in order to increase their performance and accuracy. Works on IOS 12 or later.</p>
-			  <p style="color: #707070">#Swift #CoreML #AR</p>
-        <div class="button-container">
-			   <a target="_blank" href="https://github.com/racob/archy_old">View Source</a><a target="_blank" href="https://www.behance.net/gallery/90954233/Archy">View Case Study</a>
-        </div>
-			</div>
-			<div class="card">
-			  <img src="img/jualanmu.png" loading="lazy" alt="Jualanmu app">
-			  <h1>Jualanmu</h1>
-			  <p>An app to help small and medium enterprises manage and analyze their business with easy-to-use features for inventory, transaction, and report.</p>
-			  <p style="color: #707070">#Swift #Firebase #Business</p>
-			  <a target="_blank" href="https://apps.apple.com/id/app/jualanmu-pos-and-report/id1490369748">View on App Store</a>
-			</div>
-			<div class="card">
-			  <img src="img/stargazer.png" loading="lazy" alt="stargazer site mockup">
-			  <h1>Stargazer</h1>
-			  <p>A project that focuses on UI design and integrating technology with business perpective as it implements many concept and principles of Information System.</p>
-			  <p style="color: #707070">#UI #UX #Travel</p>
-			  <div class="button-container">
-			  	<a target="_blank" href="https://www.youtube.com/watch?v=h7q0x3LwzR4">View Presentation</a><a target="_blank" href="https://drive.google.com/file/d/1UDRHjAVWRHQ44eYf1Blgm1_DpQ-utwgI/view?usp=sharing">View Mockup</a>
-			  </div>
-			</div>
-		</div>
-  	</div>
-
-  	<footer>
-		  <hr>
-  		<p>2020 Copyright. All Rights Reserved.</p>
-  	</footer>
-
+    <nav class="navbar is-dark has-background-grey-nav is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#eibiel" onclick="hideNav()"><p class="title has-text-grey is-size-4">Mohamad Eibiel Sardjanto</p></a>
+        <a role="button" class="navbar-burger has-text-grey" aria-label="menu" aria-expanded="false" data-target="navbar" onclick="toggleActive()">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
     
-    <script src="js/ScrollMagic.min.js"></script>
-    <script src="js/animation.gsap.min.js"></script>
-    <script src="js/TimelineLite.min.js"></script>
-    <script src="js/TweenMax.min.js"></script>
-    <script src="js/CSSPlugin.min.js"></script>
-    <script src="js/script.js"></script>
+      <div id="navbar" class="navbar-menu has-background-grey-nav">
+        <div class="navbar-end">
+          <a class="navbar-item has-text-grey" href="#about" onclick="hideNav()">About Me</a>
+          <a class="navbar-item has-text-grey" href="#projects" onclick="hideNav()">My Projects</a>
+        </div>
+      </div>
+    </nav>
 
+    <section class="hero is-dark has-background-grey-bg is-fullheight mt-2" id="eibiel">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div class="column">
+              <p class="title is-size-2-mobile is-size-1-desktop">Hi,</p>
+              <p class="title is-size-2-mobile is-size-1-desktop">I'm <strong class="has-text-primary">Eibiel,</strong></p>
+              <p class="title is-size-2-mobile is-size-1-desktop is-spaced">IOS Developer</p>
+              <p class="subtitle is-size-6-mobile has-text-grey-light">Jakarta, Indonesia | Computer Science Undergraduate</p>
+              <div class="buttons are-medium">
+                <a target="_blank" data-tooltip="Github" class="button is-dark has-tooltip-arrow has-tooltip-bottom has-tooltip-primary" href="https://github.com/racob">
+                  <span class="icon is-large">
+                    <i class="fab fa-github-square fa-2x"></i>
+                  </span>
+                </a>
+                <a target="_blank" data-tooltip="LinkedIn" class="button is-dark has-tooltip-arrow has-tooltip-bottom has-tooltip-primary" href="https://www.linkedin.com/in/eibiel/">
+                  <span class="icon is-large">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                  </span> 
+                </a>
+                <a target="_blank" data-tooltip="eibiel.sardjanto@gmail.com" class="button is-dark has-tooltip-arrow has-tooltip-bottom has-tooltip-primary" href="mailto:eibiel.sardjanto@gmail.com">
+                  <span class="icon is-large">
+                    <i class="fas fa-envelope-square fa-2x"></i>
+                  </span>
+                </a>
+                <a target="_blank" data-tooltip="Telegram" class="button is-dark has-tooltip-arrow has-tooltip-bottom has-tooltip-primary" href="https://t.me/eibiel_s">
+                  <span class="icon is-large">
+                    <i class="fab fa-telegram fa-2x"></i>
+                  </span>
+                </a>
+				        <a target="_blank" data-tooltip="Resume" class="button is-dark has-tooltip-arrow has-tooltip-bottom has-tooltip-primary" href="https://drive.google.com/drive/folders/1m35XlFNzsyQI5JimalOMGPbRfp9xnTEZ?usp=sharing">
+                  <span class="icon is-large">
+                    <i class="far fas fa-pen-square fa-2x"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image">
+                    <img src="img/profile-img.jpg" loading="lazy" alt="Mohamad Eibiel Sardjanto">
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-dark has-background-grey-bg is-fullheight" id="about">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <p class="title is-size-1 has-text-light">About Me</p>
+          <article class="message is-medium is-dark">
+            <div class="message-body has-text-justified-mobile">
+              <div class="block">
+                Graduated from Apple Developer Academy Indonesia 2019. Mainly Experienced in native IOS app development.
+              </div>
+              <div class="block">
+                Handled many frontend projects, but also curious in machine learning, cloud computing, and other platforms development.
+              </div>
+              <div class="block">
+                Currently studying in Faculty of Computer Science and Engineering as an undergraduate in International University Liaison Indonesia (IULI).
+              </div>
+            </div>
+          </article>
+          <figure class="image is-64x64 is-pulled-right">
+            <img src="img/swift-logo.png">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-dark has-background-grey-bg is-fullheight" id="projects">
+      <div class="hero-body">
+        <div class="container">
+          <p class="title is-size-1 has-text-light">My Projects</p>
+          <div class="columns">
+            <div class="column">
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image is-5by3">
+                    <img src="img/archy.gif" loading="lazy" alt="Archy demo gif">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    <p class="title has-text-dark">Archy</p>
+                    <p>
+                      Body tracking app to help archers gain feedback on their posture in order to increase their performance and accuracy. Works on IOS 12 or later.
+                    </p>
+                    <span class="tag is-primary is-light">Swift</span>
+                    <span class="tag is-primary is-light">CoreML</span>
+                    <span class="tag is-primary is-light">AR</span>
+                  </div>
+                </div>
+                <footer class="card-footer">
+                  <a class="card-footer-item" target="_blank" href="https://github.com/racob/archy_old">Source code</a>
+                  <a class="card-footer-item" target="_blank" href="https://www.behance.net/gallery/90954233/Archy">Case study</a>
+                </footer>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image is-5by3">
+                    <img src="img/jualanmu.png" loading="lazy" alt="Jualanmu app">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    <p class="title has-text-dark">Jualanmu</p>
+                    <p>
+                      An app to help small and medium enterprises manage and analyze their business with easy-to-use features for inventory, transaction, and report.
+                    </p>
+                    <span class="tag is-primary is-light">Swift</span>
+                    <span class="tag is-primary is-light">Firebase</span>
+                    <span class="tag is-primary is-light">Business</span>
+                  </div>
+                </div>
+                <footer class="card-footer">
+                  <a class="card-footer-item" target="_blank" href="https://apps.apple.com/id/app/jualanmu-pos-and-report/id1490369748">App store</a>
+                </footer>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image is-5by3">
+                    <img src="img/stargazer.png" loading="lazy" alt="stargazer site mockup">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    <p class="title has-text-dark">Stargazer</p>
+                    <p>
+                      A project that focuses on UI design and integrating technology with business perpective as it implements many concept and principles of Information System.
+                    </p>
+                    <span class="tag is-primary is-light">UI</span>
+                    <span class="tag is-primary is-light">UX</span>
+                    <span class="tag is-primary is-light">Travel</span>
+                  </div>
+                </div>
+                <footer class="card-footer">
+                  <a class="card-footer-item" target="_blank" href="https://www.youtube.com/watch?v=h7q0x3LwzR4">Presentation</a>
+                  <a class="card-footer-item" target="_blank" href="https://www.youtube.com/watch?v=h7q0x3LwzR4">Mockup</a>
+                </footer>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer has-background-grey-bg">
+      <div class="content has-text-centered is-centered">
+        <p class="has-text-light">
+          Made by <strong class="has-text-light">Mohamad Eibiel Sardjanto.</strong> Hosted at <a class="has-text-primary" href="https://pages.github.com/">github.io</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/nav.js"></script>
   </body>
 </html>
