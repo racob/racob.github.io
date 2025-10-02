@@ -128,6 +128,14 @@ const config = {
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
+      title: 'Talabat',
+      description: 'Developing and maintaining food delivery mobile applications for 8 countries across the MENA region.',
+      imageUrl: `/talabat.png`,
+      link: 'https://www.talabat.com',
+      backgroundColor: '#f55905',
+      textColor: 'white',
+    },
+    {
       title: 'Line Bank (iOS)',
       description: 'Worked with Hana Bank Korea to develop their iOS mobile digital banking app, Line Bank.',
       imageUrl: `/linebank.png`,
