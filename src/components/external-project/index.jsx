@@ -69,36 +69,53 @@ const ExternalProject = ({ externalProjects, loading, googleAnalytics }) => {
   };
 
   const renderExternalProjects = () => {
-    return externalProjects.map((item, index) => (
-      <a
-        className="card shadow-lg compact bg-base-100 cursor-pointer"
-        key={index}
-        href={item.link}
-        onClick={(e) => {
-          e.preventDefault();
-
-          try {
-            if (googleAnalytics?.id) {
-              ga.event({
-                action: 'Click External Project',
-                params: {
-                  post: item.title,
-                },
-              });
-            }
-          } catch (error) {
-            console.error(error);
+    return externalProjects.map((item, index) => {
+      const hasCustomStyling = item.backgroundColor || item.textColor;
+      const cardClassName = hasCustomStyling
+        ? "card shadow-lg compact cursor-pointer"
+        : "card shadow-lg compact bg-base-100 cursor-pointer";
+      const cardStyle = hasCustomStyling
+        ? {
+            backgroundColor: item.backgroundColor || undefined,
+            color: item.textColor || undefined,
+            opacity: 1
           }
+        : {};
 
-          window?.open(item.link, '_blank');
-        }}
-      >
+      return (
+        <a
+          className={cardClassName}
+          style={cardStyle}
+          key={index}
+          href={item.link}
+          onClick={(e) => {
+            e.preventDefault();
+
+            try {
+              if (googleAnalytics?.id) {
+                ga.event({
+                  action: 'Click External Project',
+                  params: {
+                    post: item.title,
+                  },
+                });
+              }
+            } catch (error) {
+              console.error(error);
+            }
+
+            window?.open(item.link, '_blank');
+          }}
+        >
         <div className="p-8 h-full w-full">
           <div className="flex items-center flex-col">
             <div className="w-full">
               <div className="px-4">
                 <div className="text-center w-full">
-                  <h2 className="font-semibold text-lg tracking-wide text-center opacity-60 mb-2">
+                  <h2 className={`font-semibold text-lg tracking-wide text-center mb-2 ${
+                    hasCustomStyling ? 'opacity-100' : 'opacity-60'
+                  }`}
+                  style={hasCustomStyling ? { color: item.textColor } : {}}>
                     {item.title}
                   </h2>
                   {item.imageUrl && (
@@ -116,7 +133,10 @@ const ExternalProject = ({ externalProjects, loading, googleAnalytics }) => {
                       </div>
                     </div>
                   )}
-                  <p className="mt-1 text-base-content text-opacity-60 text-sm">
+                  <p className={`mt-1 text-sm ${
+                    hasCustomStyling ? 'opacity-100' : 'text-base-content text-opacity-60'
+                  }`}
+                  style={hasCustomStyling ? { color: item.textColor } : {}}>
                     {item.description}
                   </p>
                 </div>
@@ -125,7 +145,8 @@ const ExternalProject = ({ externalProjects, loading, googleAnalytics }) => {
           </div>
         </div>
       </a>
-    ));
+      );
+    });
   };
 
   return (
